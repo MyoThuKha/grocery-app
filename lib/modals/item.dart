@@ -9,5 +9,17 @@ class ItemModel extends ChangeNotifier {
     ["water", "4.00", "images/water.png", Colors.blue],
   ];
 
+  final List _userItems = [];
+
+  void addItems(int index) {
+    _userItems.add(_items[index]);
+  }
+
+  void removeItems(int index) {
+    _userItems.remove(_items[index]);
+    notifyListeners();
+  }
+
   get shopItems => _items;
+  get userItems => _userItems;
 }

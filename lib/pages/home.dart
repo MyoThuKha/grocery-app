@@ -74,6 +74,9 @@ class Home extends StatelessWidget {
                     price: item[index][1],
                     image: item[index][2],
                     color: item[index][3],
+                    addItem: (() {
+                      context.read<ItemModel>().addItems(index);
+                    }),
                   );
                 }),
               ),

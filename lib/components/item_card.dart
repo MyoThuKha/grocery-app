@@ -1,20 +1,19 @@
-import 'package:flutter/animation.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
+import 'package:grocery_app/modals/item.dart';
 
 class ItemCard extends StatelessWidget {
   final String title;
   final String price;
   final String image;
   final dynamic color;
+  final VoidCallback addItem;
   const ItemCard({
     super.key,
     required this.title,
     required this.price,
     required this.image,
     required this.color,
+    required this.addItem,
   });
 
   @override
@@ -36,9 +35,7 @@ class ItemCard extends StatelessWidget {
               ),
               Text(title),
               GestureDetector(
-                onTap: () {
-                  print("tapped");
-                },
+                onTap: () => addItem(),
                 child: Container(
                   padding:
                       const EdgeInsets.symmetric(horizontal: 24, vertical: 8),
