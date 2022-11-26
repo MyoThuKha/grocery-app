@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:grocery_app/modals/cart.dart';
+import 'package:grocery_app/components/item_card.dart';
+import 'package:grocery_app/modals/item.dart';
 import 'package:provider/provider.dart';
 
 class Home extends StatelessWidget {
@@ -53,11 +54,16 @@ class Home extends StatelessWidget {
             Expanded(
               child: GridView.builder(
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 2),
-                itemCount: context.watch<CardModel>().shopItems.length,
+                    crossAxisCount: 2, childAspectRatio: 1 / 1.2),
+                itemCount: context.watch<ItemModel>().shopItems.length,
                 itemBuilder: ((context, index) {
-                  return Text(
-                      '${context.watch<CardModel>().shopItems[index][0]}');
+                  List item = context.watch<ItemModel>().shopItems;
+                  return ItemCard(
+                    title: item[index][0],
+                    price: item[index][1],
+                    image: item[index][2],
+                    color: item[index][3],
+                  );
                 }),
               ),
             )

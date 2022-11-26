@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class CardModel extends ChangeNotifier {
+class ItemModel extends ChangeNotifier {
   //itemName,itemPrice,imagePath,color
   final List _items = [
     ["avocado", "4.00", "images/avocado.png", Colors.green],
