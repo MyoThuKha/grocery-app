@@ -23,7 +23,7 @@ class ItemCard extends StatelessWidget {
       padding: const EdgeInsets.all(12.0),
       child: Container(
         decoration: BoxDecoration(
-            color: color[300], borderRadius: BorderRadius.circular(12)),
+            color: color[200], borderRadius: BorderRadius.circular(12)),
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Column(

@@ -11,6 +11,17 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
+
+      //Floating Button
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.pushNamed(context, "/cart");
+        },
+        backgroundColor: Colors.black,
+        child: const Icon(Icons.shopping_bag_rounded),
+      ),
+
+      //Widget
       body: SafeArea(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -47,7 +58,7 @@ class Home extends StatelessWidget {
 
             //Items
             const Padding(
-              padding: EdgeInsets.symmetric(horizontal: 24),
+              padding: EdgeInsets.symmetric(horizontal: 24, vertical: 18),
               child: Text("Fresh Items"),
             ),
 
