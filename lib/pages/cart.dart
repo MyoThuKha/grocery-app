@@ -65,6 +65,45 @@ class Cart extends StatelessWidget {
                       ),
                     );
                   }),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Container(
+                padding: const EdgeInsets.all(24),
+                decoration: BoxDecoration(
+                    color: Colors.green[400],
+                    borderRadius: BorderRadius.circular(12)),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: <Widget>[
+                    Column(
+                      children: [
+                        Text(
+                          "Total Price",
+                          style: TextStyle(
+                            color: Colors.grey[300],
+                          ),
+                        ),
+                        Text(
+                          '\$ ${context.read<ItemModel>().getTotal()}',
+                          style: const TextStyle(
+                              fontSize: 24, color: Colors.white),
+                        ),
+                      ],
+                    ),
+                    Container(
+                      padding: const EdgeInsets.all(12),
+                      decoration: BoxDecoration(
+                          border: Border.all(color: Colors.grey[200]!),
+                          borderRadius: BorderRadius.circular(12)),
+                      child: const Text(
+                        "Pay Now",
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
             )
           ],
         ),

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:grocery_app/modals/item.dart';
 
 class ItemCard extends StatelessWidget {
   final String title;
@@ -22,23 +21,28 @@ class ItemCard extends StatelessWidget {
       padding: const EdgeInsets.all(12.0),
       child: Container(
         decoration: BoxDecoration(
-            color: color[200], borderRadius: BorderRadius.circular(12)),
+            color: color[100], borderRadius: BorderRadius.circular(12)),
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: <Widget>[
+              //Image
               Image.asset(
                 image,
                 height: 64,
               ),
+
+              //title
               Text(title),
+
+              //price
               GestureDetector(
                 onTap: () => addItem(),
                 child: Container(
                   padding:
-                      const EdgeInsets.symmetric(horizontal: 24, vertical: 8),
+                      const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
                   decoration: BoxDecoration(
                       color: color[800],
                       borderRadius: BorderRadius.circular(8)),

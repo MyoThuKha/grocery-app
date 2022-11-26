@@ -16,8 +16,16 @@ class ItemModel extends ChangeNotifier {
   }
 
   void removeItems(int index) {
-    _userItems.remove(_items[index]);
+    _userItems.remove(_userItems[index]);
     notifyListeners();
+  }
+
+  String getTotal() {
+    double result = 0;
+    for (int i = 0; i < _userItems.length; i++) {
+      result += double.parse(_userItems[i][1]);
+    }
+    return result.toString();
   }
 
   get shopItems => _items;

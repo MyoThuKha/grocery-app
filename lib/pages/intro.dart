@@ -23,17 +23,23 @@ class Intro extends StatelessWidget {
             Expanded(
               child: Column(
                 children: [
-                  Text("We deliver groceries at your doorstep",
-                      textAlign: TextAlign.center,
-                      style: GoogleFonts.playfairDisplay(
-                        textStyle: const TextStyle(
-                          fontSize: 40,
-                          fontWeight: FontWeight.w500,
-                        ),
-                      )),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 8),
+                    child: Text("We deliver groceries at your doorstep",
+                        textAlign: TextAlign.center,
+                        style: GoogleFonts.playfairDisplay(
+                          textStyle: const TextStyle(
+                            fontSize: 40,
+                            fontWeight: FontWeight.w500,
+                          ),
+                        )),
+                  ),
 
-                  const Text(
-                    "Fresh Items everyday",
+                  const Padding(
+                    padding: EdgeInsets.symmetric(vertical: 24),
+                    child: Text(
+                      "Fresh Items everyday",
+                    ),
                   ),
                   const Spacer(),
                   //Button

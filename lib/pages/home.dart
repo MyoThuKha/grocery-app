@@ -51,7 +51,9 @@ class Home extends StatelessWidget {
 
             const Padding(
               padding: EdgeInsets.symmetric(horizontal: 24),
-              child: Divider(),
+              child: Divider(
+                thickness: 1,
+              ),
             ),
 
             const SizedBox(height: 24),
